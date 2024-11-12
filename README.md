@@ -1,10 +1,10 @@
 ## Before you start
 
-There are a few things we would like you to know.
+Here are a few things we’d like you to keep in mind:
 
-1. Our developement tech stack is a combination of Next Js, SCSS & Typescript. Just in case you are in the fence about what technology to use. This is absolutly not necessory to use exactly the same stack.
-2. Time limit is 24 hrs
-3. Please complete as much as possible within the time limit. We mainly want to see how you approach the problem
+1. Our development tech stack includes Next.js, SCSS, and TypeScript, in case you’re considering which technologies to use. However, you’re not required to use this exact stack.
+
+2. The time limit for the task is 24 hours. Please complete as much as you can within this timeframe—we’re primarily interested in seeing your approach to the problem.
 
 ## Tasks
 
