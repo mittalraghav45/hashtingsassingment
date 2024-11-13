@@ -1,6 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 const PORT = 3002;
+
+
+app.use(cors());
 
 const data = {
   navItems: [{
@@ -52,21 +56,21 @@ const data = {
     {
       title: "Reviving Retro PCs",
       description: "What happens when old PCs are given modern upgrades?",
-      imageUrl: "/path/to/article1-image.jpg"
+      imageUrl: "/images/image-retro-pics.jpg"
     },
     {
       title: "Top 10 Laptops of 2022",
       description: "Our best picks for various needs and budgets.",
-      imageUrl: "/path/to/article2-image.jpg"
+      imageUrl: "/images/image-top-laptops.jpg"
     },
     {
       title: "The Growth of Gaming",
       description: "How the pandemic has sparked fresh opportunities.",
-      imageUrl: "/path/to/article3-image.jpg"
+      imageUrl: "/images/image-gaming-growth.jpg"
     }
   ]
 };
-
+ 
 app.get('/data', (req, res) => {
   res.json(data);
 });
