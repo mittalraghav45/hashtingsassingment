@@ -56,7 +56,7 @@ const data = {
     {
       title: "Reviving Retro PCs",
       description: "What happens when old PCs are given modern upgrades?",
-      imageUrl: "/images/image-retro-pics.jpg"
+      imageUrl: "/images/image-retro-pcs.jpg"
     },
     {
       title: "Top 10 Laptops of 2022",

@@ -22,7 +22,7 @@ function ArticleList() {
           <div>
             <img src={article.imageUrl} alt={article.title} />
           </div>
-          <div style={{ marginLeft: "15px" }}>
+          <div className='img-text'>
             <div class="text-num">{"0"+`${index + 1}`}</div>
             <div><strong>{article.title}</strong></div>
             <div>{article.description}</div>

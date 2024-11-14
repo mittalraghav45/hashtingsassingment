@@ -22,22 +22,23 @@ useEffect(() => {
 }, []);
 
  
-
   return (
     <div className="content">
       <section className="main-article">
-        <img src="/images/image-web-3-desktop.jpg" alt="Web 3.0 illustration" />
+        <img src="/images/image-web-3-desktop.jpg" alt="Web 3.0 illustration" style={{width: "100%"}} />
 
-        <div className="main-text" style={{ display: "flex" }}>
-          <h2 class="new-head-3">{data.title}</h2>
-          <span>{data.description} <br />
-            <button className="read"><strong>
-              READ MORE </strong></button>
+        <div className="main-text">
+          <h2 class="new-head-3">{data?.title}</h2>
+         
+          <span className="text-desc">{data?.description} 
+            <br />
+            <button className="read" onClick={() => window.open(data?.ctaButton?.url)}>
+              {data?.ctaButton?.name}</button>
           </span>
+
         </div>
       </section>
-      {/* {console.log('news ',news)} */}
-   
+         
    
       <div className="sidebar">
       <h1 class="new-head" >New</h1>
@@ -46,7 +47,7 @@ useEffect(() => {
           <ul class="new-head-1">
             {news.articles.map((article, index) => (
               <li key={index}>
-                <strong>{article.title}</strong> <br />
+                <h4 className="sidebar-heading">{article.title}</h4> <br />
                 <p className="new-head-2">{article.description}</p>
               </li>
             ))}
