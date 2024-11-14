@@ -3,6 +3,7 @@ import axios from 'axios';
  
 function Header() {
   const [navItems, setNavItems] = useState([]);
+  const [showMenu, setShowMenu] = useState(false);
 
   useEffect(() => {
     axios
@@ -15,11 +16,28 @@ function Header() {
       });
   }, []);
 
+  const renderSlideMenu = () => {
+    return (
+      <div className='side-menu'>
+        <div className='close-btn' onClick={() => setShowMenu(false)}>
+          X
+        </div>
+        <ul className='menu-links'>
+          {navItems.map((item, index) => (
+              <li key={index}>
+                <a href={item.url} className='menu-link'>{item.name}</a>
+              </li>
+            ))}
+        </ul>
+      </div>
+    );
+  };
+
   return (
+    <>
     <header className="navbar">
-      {/* <h1 className="logo">W.</h1> */}
       <img src='/images/logo.svg' alt='logo' height={30}/>
-      <nav>
+      <nav className='nav-links'>
         <ul >
           {navItems.map((item, index) => (
             <li key={index}>
@@ -28,12 +46,14 @@ function Header() {
           ))}
         </ul>
       </nav>
-      <div className='hamburger'>
+      <div className='hamburger' onClick={() => setShowMenu(true)}>
         <div></div>
         <div></div>
         <div></div>
       </div>
     </header>
+    {showMenu && renderSlideMenu()}
+    </>
   );
 }
 
